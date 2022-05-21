@@ -78,6 +78,8 @@ struct BiometricsFingerprint : public IBiometricsFingerprint {
     bool mIsUdfps;
     UdfpsHandlerFactory* mUdfpsHandlerFactory;
     UdfpsHandler* mUdfpsHandler;
+    Return<void> onShowUdfpsOverlay() override;
+    Return<void> onHideUdfpsOverlay() override;
 };
 
 }  // namespace implementation
